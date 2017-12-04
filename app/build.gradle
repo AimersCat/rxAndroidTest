@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        applicationId "com.rxadnroid.rxandroidtest"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+
+    dataBinding {
+        enabled =true
+    }
+}
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.anko:anko-common:$anko_version"
+    compile 'io.reactivex:rxjava:1.2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.orhanobut:hawk:2.0.0-Alpha'
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    //加载动画
+    compile 'com.yalantis:phoenix:1.2.3'
+    compile 'com.bigkoo:alertview:1.0.3'
+    compile 'com.android.support:design:25.1.0'
+
+}

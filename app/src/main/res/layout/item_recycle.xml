@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:padding="8dp"
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_msg_toux"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <LinearLayout
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/id_touxiang"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/id_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:id="@+id/id_name"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/id_msg_item_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_toux_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/id_touxiang">
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/tv_msg_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_below="@+id/tv_msg_title"
+                    android:id="@+id/tv_msg_begin_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_msg_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_msg_begin_time"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
